@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+# Solar Next.js Starter
 # Solar Next.js Starter
 
 Minimal Next.js (App Router) + TypeScript + Tailwind starter for a solar installation website.
