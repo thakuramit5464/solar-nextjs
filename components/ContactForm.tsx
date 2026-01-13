@@ -6,7 +6,7 @@ export default function ContactForm() {
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
     return (
-        <form className="space-y-4 max-w-xl">
+        <form className="space-y-4 w-full max-w-xl">
             <div>
                 <label className="block text-sm">Name</label>
                 <input value={name} onChange={e => setName(e.target.value)} className="w-full border p-2 rounded" />
