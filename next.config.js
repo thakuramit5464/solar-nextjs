@@ -4,11 +4,11 @@ const repoName = "solar-nextjs"; // update if repo name changes
 
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
   ...(isProd && {
     basePath: `/${repoName}`,
     assetPrefix: `/${repoName}/`,
-    trailingSlash: true,
-  }),
 };
 
 module.exports = nextConfig;
