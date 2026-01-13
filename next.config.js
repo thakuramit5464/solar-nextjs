@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === "production";
-const repoName = "solar-nextjs"; // update if repo name changes
+const isGithubPages = process.env.DEPLOY_TARGET === "github";
+const repoName = "solar-nextjs";
 
 const nextConfig = {
   reactStrictMode: true,
-  output: "export",
-  trailingSlash: true,
-  ...(isProd && {
+  trailingSlash: isGithubPages,
+
+  ...(isGithubPages && {
+    output: "export",
     basePath: `/${repoName}`,
     assetPrefix: `/${repoName}/`,
   }),
